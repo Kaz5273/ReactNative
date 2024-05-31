@@ -169,13 +169,14 @@ const App = () => {
   const renderTaskList = () => {
     return tasks.map((task, index) => (
       <View key={index} style={styles.task}>
-        <Text>Task Name: {task.name}</Text>
-        <Text>Task Description: {task.description}</Text>
+        <Text>nom de la tache: {task.name}</Text>
+        <Text>Description de la tache: {task.description}</Text>
         <Button title="Supprimer la tache" onPress={() => deleteTask(task.name)} />
-
+           <Button title="modifier la tache" onPress={() => modifyTask(task.name)} />
       </View>
     ));
   };
+
 
   return (
     <View style={styles.container}>
